@@ -11,7 +11,6 @@ let isMultiples (elem:int, multiples:list<int>) =
 let sumofMultiples multiples max =
     [1 .. (max - 1)] 
         |> Seq.filter (fun elem -> isMultiples(elem, multiples)) 
-        |> Seq.distinct 
         |> Seq.sum
 
 sumofMultiples [3; 5] 20
